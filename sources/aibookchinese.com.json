@@ -1,0 +1,73 @@
+{
+
+    "name": "御书房",
+
+    "url": "aibookchinese.com",
+
+    "version": 100,
+
+    "search": {
+
+        "url": "http://aibookchinese.com/api/search/index.html?content=%E5%A5%B3&p=1${key}",
+
+        "charset": "UTF-8",
+
+        "list": "$.list[*]",
+
+        "name": "$.album_name",
+
+        "author": "$.author",
+
+        "cover": "$.img",
+
+        "summary": "$.album_info",
+
+        "detail": "http://aibookchinese.com/api/books/index?album_id=${$.id}"
+
+    },
+
+    "detail": {
+
+        "status": "$.data.album_info//.state_id@eqal->2",
+
+        "lastChapter": "$.data.new_chapter.title",
+
+        "catalog": "http://aibookchinese.com/api/book/pl_buy.html@post->{\"album_id\":\"${$.data.album_info.id}\"}"
+
+    },
+
+    "catalog": {
+
+        "list": "$.new_chapter_list[*]",
+
+        "booklet": {
+
+            "name": "$.name",
+
+            "list": "$.arr[*]"
+
+          },
+
+        "name": "$.title",
+
+        "chapter": "http://aibookchinese.com/api/book/content.html?album_id=${$.album_id}&chapter_id=${$.id}"
+
+    },
+
+    "chapter": {
+
+        "content": "$.album_info.chapter_content"
+
+    }
+
+    ,"auth":{
+
+        "login":"http://aibookchinese.com/api/login/runlogin.html?username=17640408537&password=mmling123",
+
+        "cookie":"aibookchinese.com",
+
+        "logged":"$.code@equal->0"
+
+    }
+
+}
