@@ -1,7 +1,7 @@
 {
     "name": "超星图书",
     "url": "yz4.chaoxing.com",
-    "version": 101,
+    "version": 102,
     "search": {
         "url": "http://yz4.chaoxing.com/circlemarket/getsearch@post->start=0&size=25&sw=${key}&channelId=52",
         "charset": "UTF-8",
@@ -71,7 +71,8 @@
                { "key": 1000000048, "value": "建筑雕塑"},
                { "key": 1000000081, "value": "戏曲喜剧"},
                { "key": 1000001046, "value": "电影电视"},
-               { "key": 1000000075, "value": "艺术理论"}]}, 
+               { "key": 1000000075, "value": "艺术理论"}], 
+               "list": "$.subject"}, 
       {  
            "title":"经管", 
            "url": "http://yz4.chaoxing.com/circlemarket/getBook@post->start=0&size=1000&channelId=${key}",  
