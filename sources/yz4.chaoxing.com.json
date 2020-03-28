@@ -1,7 +1,7 @@
 {
     "name": "超星图书",
     "url": "yz4.chaoxing.com",
-    "version": 103,
+    "version": 104,
     "search": {
         "url": "http://yz4.chaoxing.com/circlemarket/getsearch@post->start=0&size=25&sw=${key}&channelId=52",
         "charset": "UTF-8",
@@ -110,6 +110,16 @@
                 { "key": 1000000432, "value": "军事百科"}],
                 "list": "$.subject"
         },  {
+            "title":"理学",
+            "url": "http://yz4.chaoxing.com/circlemarket/getBook@post->start=0&size=1000&channelId=${key}",
+            "categories": [
+                { "key": 1000000017, "value": "科普读物"}, 
+                { "key": 1000000020, "value": "天文地球"},
+                { "key": 1000000022, "value": "生物科学"},
+                { "key": 1000000019, "value": "数学物理化学"},
+                { "key": 1000000023, "value": "自然科学总论"}],
+                "list": "$.subject"
+        },  {
             "title":"工学",
             "url": "http://yz4.chaoxing.com/circlemarket/getBook@post->start=0&size=1000&channelId=${key}",
             "categories": [
@@ -117,8 +127,8 @@
                 { "key": 1000000027, "value": "航空航天"},
                 { "key": 1000000030, "value": "交通运输"},
                 { "key": 1000000031, "value": "环境科学"},
-                { "key": 1000000036, "value": "农业科学"},
-                { "key": 1000000032, "value": "计算机科学"}],
+                { "key": 1000000032, "value": "农业科学"},
+                { "key": 1000000036, "value": "计算机科学"}],
                 "list": "$.subject"
         }, {
             "title":"医药",
@@ -155,5 +165,3 @@
                 "list": "$.subject"}
        ]}
         
-  
-  
