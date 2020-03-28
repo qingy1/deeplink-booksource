@@ -8,7 +8,7 @@
  "list":".times >div:nth-child(2) >.timesOne > a",
 "name":"${$params.name}${a}",
 "cover":"http://figure2.5read.com/jt/paperimg/${$params.coverid}.jpg",
-"detail":"a@attr->onclick@match->(?<=webUrl:\').+(?=\')@replace->list->articles"
+"detail":"a@attr->onclick@match->(?<=webUrl:').+(?=')@replace->list->articles"
     },
     "detail": {
         "catalog":""
