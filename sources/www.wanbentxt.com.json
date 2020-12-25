@@ -1,16 +1,16 @@
 {
     "name": "完本神站",
-    "url": "www.wanbentxt.com",
-    "version": 104,
+    "url": "www.xinwanben.com",
+    "version": 106,
     "search": {
-        "url": "https://www.wanbentxt.com/modules/article/search.php@post->searchtype=articlename&searchkey=${key}",
-         "charset": "GBK",
-        "list": ".resultLeft > ul > li",
-        "name": "h3",
-        "author": "p.author > a",
-        "summary": "p.intro",
-        "cover": ".sortImg > a > img",
-        "detail": ".sortPhr > a"
+        "url": "https://www.wanbentxt.net/api/api.php@post->skey=${key}&action=search&page=1",
+         "charset": "utf-8",
+        "list": "$..data[*]",
+        "name": "$.articlename",
+        "author": "$.author",
+        "summary": "$.intro",
+        "cover": "$.images",
+        "detail": "https://www.xinwanben.com/${$.articleid}/"
     },
     "detail": {
         "name": "h1",
@@ -34,9 +34,10 @@
         "提示.*?看的书！",
         "-->>本章未完.*?阅读",
         "【完本神站】(.+)永不丢失！",
-        "支持.*?好友！"
+        "支持.*?好友！",
+        "手机直接访问:m.xinwanben.com",
+        "记不住网址，可以百度搜索:【完本神站】",
+        "章节错误，长时间未更新，请留言，我们会尽快处理！"
     ]
-    
-
     }
 }
